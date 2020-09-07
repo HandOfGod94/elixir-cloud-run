@@ -1,7 +1,7 @@
 # ElixirCloudRun
 
 ## Notes
-It turns out you can't provide any other registry for fetching images in GCP.  
+It turns out you can't provide any other registry for fetching images in GCP cloud run (fully managed).  
 One needs to have `gcr` enabled and image pushed to it.
 
 
