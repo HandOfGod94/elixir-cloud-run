@@ -13,4 +13,12 @@ defmodule ElixirCloudRun.Controllers.Ping do
     |> put_resp_content_type("application/json")
     |> send_resp(:ok, Jason.encode!(%{success: true}))
   end
+
+  match _ do
+    Logger.info("No matching route")
+
+    conn
+    |> put_resp_content_type("application/json")
+    |> send_resp(:not_found, Jason.encode!(%{success: false}))
+  end
 end
